@@ -1,0 +1,628 @@
+doctype html.no-js(lang='en-US')
+head
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // SITE TITLE
+    title Express Test Practice Site
+    //
+      =========================
+      Meta Information
+      ==============================
+    meta(name='description', content='Express.js Walkthrough')
+    |     
+    meta(name='keywords', content='Express.js, Node.js')
+    //
+      =========================
+      favicon and app touch icon
+      ==============================
+    link(rel='shortcut icon', href='favicon.ico')
+    |     
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    //
+      =========================
+      Bootstrap and animation
+      ==============================
+    link(rel='stylesheet', href='stylesheets/bootstrap.css')
+    |     
+    link(rel='stylesheet', href='stylesheets/animate.min.css')
+    //
+      =========================
+      Fonts, typography and icons
+      ==============================
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600', rel='stylesheet', type='text/css')
+    |     
+    link(rel='stylesheet', href='stylesheets/font-awesome.css')
+    |     
+    link(rel='stylesheet', href='stylesheets/typography.css')
+    //
+      =========================
+      Carousel, lightbox and circle generator
+      ==============================
+    link(rel='stylesheet', href='stylesheets/owl.carousel.css')
+    |     
+    link(rel='stylesheet', href='stylesheets/owl.theme.css')
+    |     
+    link(rel='stylesheet', href='stylesheets/nivo-lightbox.css')
+    |     
+    link(rel='stylesheet', href='stylesheets/nivo-lightbox-default.css')
+    |     
+    link(rel='stylesheet', href='stylesheets/jquery.circliful.css')
+    // ***** Custom Stylesheet *****
+    link(rel='stylesheet', href='stylesheets/main.css')
+    // ***** Responsive fixes *****
+    link(rel='stylesheet', href='stylesheets/responsive.css')
+    // Header scripts
+    script(src='javascripts/vendor/modernizr-2.8.3.min.js')
+    |     
+    script(src='javascripts/queryloader2.min.js')
+    //
+      =========================
+      Preloader
+      ==============================
+    script.
+      window.addEventListener('DOMContentLoaded', function() {
+      "use strict";
+      new QueryLoader2(document.querySelector("body"), {
+      barColor: "#e74c3c",
+      backgroundColor: "#111",
+      percentage: true,
+      barHeight: 1,
+      minimumTime: 200,
+      fadeOutTime: 1000
+      });
+      });
+      var alert_color_success_background = '#e74c3c';
+      var alert_color_error_background = '#CF000F';
+  body
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+    //
+      =========================
+      Fullscreen menu
+      ==============================
+    .mobilenav
+      ul
+        li(data-rel='#header')
+          span.nav-label Home
+        |             
+        li(data-rel='#nextpage')
+          span.nav-label Next Page
+    // *** end Full Screen Menu ***
+    // *****  hamburger icon *****
+    a.menu-trigger(href='javascript:void(0)')
+      .hamburger
+        .menui.top-menu
+        |          
+        .menui.mid-menu
+        |          
+        .menui.bottom-menu
+    //
+      =========================
+      Header
+      ==============================
+    header#header
+      #myCarousel.carousel.slide
+        // Indicators
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          |                 
+          li(data-target='#myCarousel', data-slide-to='1')
+          |                 
+          li(data-target='#myCarousel', data-slide-to='2')
+        // Wrapper for Slides
+        .carousel-inner
+          // *****  Logo *****
+          .logo-container
+            a(href='#')
+              h1 Express Test Site
+          //
+            =========================
+            Header item 1
+            ==============================
+          .item.active
+            // Set the first background image using inline CSS below.
+            .fill(style="background-image:url('images/slider/slider1.jpg');")
+            |                     
+            .carousel-caption
+              h1.light.mab-none
+                | This is 
+                strong.bold-text Express.js
+              |                         
+              h1.light.margin-bottom-medium.mat-none
+                | And it is 
+                strong.bold-text Awesome
+              |                         
+              p.light.margin-bottom-medium This is a site built using Express.js
+              |                         
+              .call-button
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a.button.pull-center.internal-link.bold-text.main-bg.hvr-grow(href='#about-us', data-rel='#about-us') Fun Times
+                  |                                 
+                  .clearfix
+            |                     
+            .overlay
+          //
+            =========================
+            Header item 2
+            ==============================
+          .item
+            // Set the second background image using inline CSS below.
+            .fill(style="background-image:url('images/slider/slider2.jpg');")
+            |                     
+            .carousel-caption
+              h1.light.mab-none
+                | Below I will show you 
+                strong.bold-text
+              |                         
+              h1.light.margin-bottom-medium.mat-none
+                | How I put 
+                strong.bold-text This site together
+              |                         
+              p.light.margin-bottom-medium This is a site built using Express.js
+              |                         
+              .call-button
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a.button.pull-center.internal-link.bold-text.main-bg.hvr-grow(href='#about-us', data-rel='#about-us') Fun Times
+                  |                                 
+                  .clearfix
+            |                     
+            .overlay
+          //
+            =========================
+            Header item 3
+            ==============================
+          .item
+            // Set the third background image using inline CSS below.
+            .fill(style="background-image:url('images/slider/slider3.jpg');")
+            |                     
+            .carousel-caption
+              h1.light.mab-none
+                | Try to follow below 
+                strong.bold-text
+              |                         
+              h1.light.margin-bottom-medium.mat-none
+                | It is interesting and 
+                strong.bold-text fun
+              |                         
+              p.light.margin-bottom-medium This is a site built using Express.js
+              |                         
+              .call-button
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a.button.pull-center.internal-link.bold-text.main-bg.hvr-grow(href='#about-us', data-rel='#about-us') Fun Times
+                  |                                 
+                  .clearfix
+            |                     
+            .overlay
+        // *** end wrapper ***
+        // Carousel Controls
+        a.left.carousel-control.hidden-xs(href='#myCarousel', data-slide='prev')
+          span.icon-prev.icon-arrow-left
+        |             
+        a.right.carousel-control.hidden-xs(href='#myCarousel', data-slide='next')
+          span.icon-next.icon-arrow-right
+    // *** end Header ***
+    //
+      =========================
+      Call to action
+      ==============================
+    section#call-to-action.call-to-action.main-bg
+      .container
+        .row
+          .col-md-6.col-md-offset-1.col-sm-6.col-sm-offset-1.col-xs-12.wow.slideInLeft.animated
+            p.light-text This is where the fun begins
+          |                 
+          .col-md-4.col-sm-4.col-xs-12.button-container.wow.slideInRight.animated
+            a.button.light.internal-link.pull-left.hvr-grow(href='#portfolio', data-rel='#portfolio') Rock n Roll
+          |                 
+          .clearfix
+    // *** end call-to-action ***
+    //
+      =========================
+      About Express.js
+      ==============================
+    section#about-us.about-us
+      .overlay
+        .container.padding-top-large
+          h2
+            strong.bold-text About
+            |                     
+            span.light-text.main-color Express.js
+          |                 
+          .line.main-bg
+          |                 
+          .row.margin-bottom-medium
+            .col-md-7
+              .jumbo-text.light-text.margin-top-medium.wow.slideInLeft(data-wow-duration='2s')
+                | Express.js
+                strong.bold-text  New Cool Fun
+            |                     
+            .col-md-5
+              img.center-block.img-responsive(src='images/computer1.jpg', alt='About Us Big Image')
+            |                     
+            .clearfix
+          |                 
+          p.margin-bottom-medium.wow.slideInUp
+            | Per 
+            a(href='https://en.wikipedia.org/wiki/Express.js')  Wikipedia 
+            | Express.js is a Node.js web application server framework, designed for building single-page, multi-page, and hybrid web applications.It is the de facto standard server framework for node.js. The original author, TJ Holowaychuk, described it as a Sinatra-inspired server, meaning that it is relatively minimal with many features available as plugins. Express is the backend part of the MEAN stack, together with MongoDB database and AngularJS frontend framework. In June 2014, rights to manage the project were acquired by StrongLoop. StrongLoop was acquired by IBM in September 2015; in January 2016, IBM announced that it would place Express.js under the stewardship of the Node.js Foundation incubator.
+          |                 
+          .row.margin-top-large
+            .col-md-8
+              #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                //
+                  =========================
+                  Collapsible Panel 1
+                  ==============================
+                .panel.panel-default
+                  #headingOne.panel-heading(role='tab')
+                    .panel-title
+                      a(href='#collapseOne', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', aria-controls='collapseOne')
+                        span.state
+                          strong -
+                        |                                             
+                        strong I&apos;m Lars Berg and I endorse this message
+                  // *** end panel-heading ***
+                  #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                    .panel-body
+                      | I&apos;m a web developer who&apos;s passionate about programming. I love to learn new things and I&apos;m really enjoying learning about how Express.js works.
+                      works
+                  // *** end collapsed item ***
+                // *** end panel ***
+              // *** end panel-group ***
+            // *** end col-md-8 ***
+            .col-md-4
+              img.center-block.img-responsive(src='images/computer2.jpg', alt='Case Study')
+    // *** end About Express.js ***
+    //
+      =========================
+      Prerequisites
+      ==============================
+    section#case-study.case-study
+      .row.mar-none.mat-none
+        // *****  Case Study Left *****
+        .col-md-6.case-study-left.wow.slideInLeft
+          .overlay.padding-large.text-right
+            .description
+              h3.margin-bottom-small.light-text Make Sure you Understand JavaScript
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        // *****  Case Study Right *****
+        .col-md-6.case-study-right.wow.slideInRight
+          .overlay.padding-large
+            .description
+              h3.margin-bottom-small.light-text Make Sure you understand Node.js
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              |                         
+              p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    // *** end Prerequisites ***
+    //
+      =========================
+      Steps to Learn Express.js
+      ==============================
+    section#why-choose-us.why-choose-us
+      .container.margin-top-large
+        h2
+          | Steps
+          strong.bold-text To Learn
+          |                 
+          span.light-text.main-color Express.js
+        |             
+        .line.main-bg.margin-bottom-large
+        |             
+        .row.text-center
+          // *****  Step *****
+          .col-md-4
+            .service.wow.slideInLeft
+              .icon
+                i.icon-idea
+              |                         
+              h4
+                | Step 1
+                strong  Team Treehouse
+              |                         
+              p
+                | Go to Team Treehouse and take the following course 
+                a(href='https://teamtreehouse.com/library/express-basics') Express Basics
+          // *****  Step *****
+          .col-md-4
+            .service.wow.fadeInUp
+              .icon
+                i.icon-idea
+              |                         
+              h4
+                | Step 2
+                strong  Express Generator
+              |                         
+              p
+                | Now that you understand Express the basics follow the steps here 
+                a(href='http://expressjs.com/en/starter/generator.html') Express Generator
+          // *****  Step *****
+          .col-md-4
+            .service.wow.slideInRight
+              .icon
+                i.icon-idea
+              |                         
+              h4
+                strong Step 3
+                |  HTML to Jade converter
+              |                         
+              p
+                | Build your site and then convert it to Jade format here 
+                a(href='http://html2jade.aaron-powell.com/') Jade Converter
+          // *****  Step *****
+          .col-md-4
+            .service.wow.slideInLeft
+              .icon
+                i.icon-mobile
+              |                         
+              h4
+                strong Step 4
+                |  Google Chrome Dev Tools
+              |                         
+              p
+                | Download Google Chrome older versions here: 
+                a(href='https://google-chrome.en.uptodown.com/mac/old')  Google Chrome. 
+                | I prefer Google Chrome 48
+          // *****  Step *****
+          .col-md-4
+            .service.wow.fadeInUp
+              .icon
+                i.icon-code
+              |                         
+              h4
+                strong Step 5
+                |  Browser and Device Testing
+              |                         
+              p
+                | Test your site locally to make sure it&apos;s fully responsive in all devices and browsers
+          // *****  Step *****
+          .col-md-4
+            .service.wow.slideInRight
+              .icon
+                i.icon-web-browser
+              |                         
+              h4
+                strong Step 6
+                |  Deploy your site live
+              |                         
+              p
+                | Deploy your site to Heroku by following the steps here: 
+                a(href='https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction') Heroku Steps
+          |                 
+          .clearfix
+        // *** end row ***
+      // *** end container ***
+    // *** end Why Choose Us ***
+    //
+      =========================
+      Benefits of Express.js
+      ==============================
+    section#our-skills.our-skills
+      .container.padding-top-large
+        h2
+          | Benefits of Using 
+          strong.bold-text
+          |                 
+          span.light-text.main-color Express.js
+        |             
+        .line.main-bg.margin-bottom-medium
+        |             
+        .row
+          .col-md-7
+            ul.skill-bar
+              li
+                p Lots of Resources
+                |                             
+                .wrapper
+                  span(data-width='100')
+              |                         
+              li
+                p Thorough Tutorials
+                |                             
+                .wrapper
+                  span(data-width='100')
+              |                         
+              li
+                p Fun to work with
+                |                             
+                .wrapper
+                  span(data-width='100')
+              |                         
+              li
+                p Great Results
+                |                             
+                .wrapper
+                  span(data-width='100')
+          |                 
+          .col-md-5
+            img.center-block.img-responsive(src='images/keys.png', alt='Our Skills are excellent')
+          |                 
+          .clearfix
+        // *** end row ***
+      // *** end container ***
+    // *** end Benefits ***
+    //
+      =========================
+      Some Links
+      ==============================
+    section#processes.processes
+      .overlay
+        .container.padding-large
+          .row
+            .col-md-5.text-center.process-interactive.wow.fadeInLeft(data-wow-duration='2s')
+              .process-bar.main-bg.discussion
+                i.icon-check
+              |                         
+              .process-bar.right.check
+                i.icon-check
+              |                         
+              .lines
+              |                         
+              .process-bar.main-bg.idea
+                i.icon-check
+              |                         
+              .process-bar.right.check
+                i.icon-check
+            // *** end col-md-5 ***
+            .col-md-7
+              // *****  Single feature *****
+              .feature.wow.fadeInUp(data-wow-delay='.2s')
+                .icon-container.pull-left
+                  span.icon-discussion
+                |                             
+                .description.text-left.pull-right
+                  h4
+                    strong Lean JavaScript
+                  |                                 
+                  p
+                    a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript') Click Here
+                |                             
+                .clearfix
+              // *****  Single feature *****
+              .feature.wow.fadeInUp(data-wow-delay='.3s')
+                .icon-container.pull-left
+                  span.icon-discussion
+                |                             
+                .description.text-left.pull-right
+                  h4
+                    strong Learn Node
+                  |                                 
+                  p
+                    a(href='http://www.tutorialspoint.com/nodejs/') Click Here
+                |                             
+                .clearfix
+              // *****  Single feature *****
+              .feature.wow.fadeInUp(data-wow-delay='.4s')
+                .icon-container.pull-left
+                  span.icon-discussion
+                |                             
+                .description.text-left.pull-right
+                  h4
+                    strong Learn Express
+                  |                                 
+                  p
+                    a(href='http://expressjs.com/') Click Here
+                |                             
+                .clearfix
+            // *** end col-md-7 ***
+    // *** end Some Links ***
+    //
+      =========================
+      Important Links
+      ==============================
+    section#we-are-hiring.we-are-hiring
+      .container.padding-large
+        .row
+          .col-md-7.col-sm-6.wow.fadeInLeft
+            .row
+              .col-md-6
+                h2
+                  | Important
+                  span.main-color.bold-text  Links
+              |                         
+              .clearfix
+            |                     
+            p.margin-top-medium
+              ul
+                li
+                  a(href='http://expressjs.com/en/resources/books-blogs.html') Express Books and Blogs
+                |                         
+                li
+                  a(href='http://expressjs.com/en/resources/community.html') Express Community
+                |                         
+                li
+                  a(href='https://www.manning.com/books/express-in-action') Express in Action
+                |                         
+                li
+                  a(href='http://codecondo.com/15-websites-built-with-express-js/') 15 Websites built with Express.js
+                |                         
+                li
+                  a(href='http://expressjs.com/en/api.html') Express.js API
+    // *** Important Links ***
+    //
+      =========================
+      Express Random
+      ==============================
+    section#twitter.twitter
+      .overlay
+        .container.padding-large.text-center
+          .row
+            .col-md-10.col-md-offset-1
+              .icon.hvr-grow
+                | SAY YES TO EXPRESS.JS
+              |                         
+              #tweets.tweet-text
+    // *** end Express Random ***
+    //
+      =========================
+      Footer
+      ==============================
+    footer#footer.footer
+      .container.padding-large.text-center
+        .row
+          .col-md-10.col-md-offset-1
+            p.margin-bottom-medium
+            p.copyright
+              | &copy; Copyright 2016 Express.js - Some Rights reserved
+    // *** end Footer ***
+    //
+      =========================
+      Back to top button
+      ==============================
+    .back-to-top(data-rel='header')
+      i.icon-up
+    //
+      =========================
+      JavaScripts
+      ==============================
+    script(src='javascripts/vendor/jquery-1.11.1.js')
+    |     
+    script(src='javascripts/vendor/jquery-migrate-1.2.1.min.js')
+    |     
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBOsiOjjoOiFBmXLU0adNjsnCKLpcDfRyI')
+    |     
+    script(src='javascripts/twitterFetcher_min.js')
+    |     
+    script(src='javascripts/vendor/bootstrap.js')
+    |     
+    script(src='javascripts/wow.min.js')
+    |     
+    script(src='javascripts/imagesloaded.pkgd.min.js')
+    |     
+    script(src='javascripts/jquery.easing.min.js')
+    |     
+    script(src='javascripts/appear.js')
+    |     
+    script(src='javascripts/jquery.circliful.min.js')
+    |     
+    script(src='javascripts/owl.carousel.min.js')
+    |     
+    script(src='javascripts/nivo-lightbox.min.js')
+    |     
+    script(src='javascripts/isotope.pkgd.min.js')
+    |     
+    script(src='javascripts/notie.js')
+    |     
+    script(src='javascripts/main.js')
