@@ -52,6 +52,9 @@ fieldset {
 textarea {
   resize: vertical;
 }
+a{
+  color:orange;
+}
 a:hover {
   text-decoration: none;
 }

@@ -51,7 +51,7 @@ head
     |     
     link(rel='stylesheet', href='stylesheets/jquery.circliful.css')
     // ***** Custom Stylesheet *****
-    link(rel='stylesheet', href='stylesheets/main.css')
+    link(rel='stylesheet', href='stylesheets/main-blue.css')
     // ***** Responsive fixes *****
     link(rel='stylesheet', href='stylesheets/responsive.css')
     // Header scripts
@@ -90,8 +90,9 @@ head
       ==============================
     .mobilenav
       ul
-        li(data-rel='#header')
-          span.nav-label Home
+        li
+          a(href='/')
+            span.nav-label Home
         |             
         li
           a(href='/index2')
@@ -127,7 +128,7 @@ head
           // *****  Logo *****
           .logo-container
             a(href='#')
-              h1 Express.js Quick Tutorial
+              h1 Express.js Green Page
           //
             =========================
             Header item 1
